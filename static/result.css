@@ -1,0 +1,12 @@
+body {
+    background-image: url('result.gif'); /* Replace 'background.gif' with the actual image file name and path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff; /* Set text color to be visible on the background */
+}
+
+.container {
+    text-align: center; /* Center the content in the container */
+    padding: 20px;
+}

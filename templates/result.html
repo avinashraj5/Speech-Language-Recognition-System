@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+<body>
+    <div class="container">
+      <!--- <img src="{{ url_for('static', filename='result-animation.gif') }}" alt="Result Animation"> -->
+        <h1>Speech Recognition Result</h1>
+        <div id="result-container">
+            <h1>Audio Language Detection - Result</h1>
+    <p>Predicted Language: {{ predicted_language }}</p>
+    <p>Predicted Probabilities:</p>
+    <ul>
+        {% for label, probability in predicted_probabilities.items() %}
+            <li>{{ label }}: {{ probability }}</li>
+        {% endfor %}
+    </ul>
+        </div>
+    </div>
+</body>
+</html>

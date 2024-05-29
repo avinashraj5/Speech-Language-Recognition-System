@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    
+    <div class="container">
+      <!-- <img src="{{ url_for('static', filename='animation.gif') }}" alt="Animation">-->
+        <h1>Hii... I'm Your Speech Language Recognition System</h1>
+        <p>Take input in any Languages to give a Result </p>
+
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.audio_file.label }}
+                <br>
+                {{ form.audio_file() }}
+            </p>
+            <p>
+                {{ form.submit() }}
+            </p>
+        </form>
+       <!----   <input type="file" id="audio-file" accept=".wav, .mp3" />
+        <button id="upload-button">Upload Audio</button>
+        <button id="submit-button" onclick="navigateToResultPage()">Submit</button>
+
+
+        <p id="output"></p>
+       <canvas id="sine-wave" width="600" height="200"></canvas>-->
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='animation.js') }}"></script>
+    <script src="{{ url_for('static', filename='onclick.js') }}"></script>
+    
+      
+</body>
+</html>
